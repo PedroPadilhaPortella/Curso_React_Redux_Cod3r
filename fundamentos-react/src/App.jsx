@@ -1,9 +1,13 @@
-import Primeiro from './components/basicos/Primeiro';
-import ComParametros from './components/basicos/ComParametros';
-import Fragmento from './components/basicos/Fragmento';
+import './App.css';
 import Aleatorio from './components/basicos/Aleatorio';
+import ComParametros from './components/basicos/ComParametros';
+import Familia from './components/basicos/Familia';
+import FamiliaMembro from './components/basicos/FamiliaMembro';
+import Fragmento from './components/basicos/Fragmento';
+import Primeiro from './components/basicos/Primeiro';
 import Card from './components/layout/Card';
-import './App.css'
+import ListaAlunos from './components/repeticao/ListaAlunos';
+import TabelaProdutos from './components/repeticao/TabelaProdutos';
 
 export default function App() {
   return (
@@ -26,6 +30,22 @@ export default function App() {
 
         <Card title="Aprendendo React na Cod3r: Número Aleatório">
           <Aleatorio max={10} min={0} />
+        </Card>
+
+        <Card title="Aprendendo React na Cod3r: Componente com Filhos" color="#055">
+          <Familia sobrenome="Portella">
+            <FamiliaMembro nome="Pedro" />
+            <FamiliaMembro nome="Samuel" />
+            <FamiliaMembro nome="Daniel" />
+          </Familia>
+        </Card>
+
+        <Card title="Aprendendo React na Cod3r: Lista de Alunos" color="#050">
+            <ListaAlunos />
+        </Card>
+
+        <Card title="Aprendendo React na Cod3r: Tabela de Produtos" color="#c30">
+            <TabelaProdutos />
         </Card>
       </div>
     </div>

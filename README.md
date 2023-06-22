@@ -1,1 +1,1 @@
-# Curso_React_Redux_Cod3r
+# Curso React Redux da Cod3r
