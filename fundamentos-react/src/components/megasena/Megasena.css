@@ -1,0 +1,13 @@
+.Megasena input {
+  font-size: 1.2rem;
+  width: 50px;
+}
+
+.Megasena label {
+  margin-right: 10px;
+}
+
+.Megasena div {
+  margin-top: 1rem;
+  display: flex;
+}

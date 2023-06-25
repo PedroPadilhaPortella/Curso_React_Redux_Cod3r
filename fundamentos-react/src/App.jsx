@@ -12,13 +12,13 @@ import UsuarioInfo from './components/condicional/UsuarioInfo';
 import Contador from './components/contador/Contador';
 import Input from './components/formulario/Input';
 import Card from './components/layout/Card';
+import Megasena from './components/megasena/Megasena';
 import ListaAlunos from './components/repeticao/ListaAlunos';
 import TabelaProdutos from './components/repeticao/TabelaProdutos';
 
 export default function App() {
   return (
     <div className='App'>
-
       <div className='Cards'>
         <Card title="Aprendendo React na Cod3r: Primeiro Componente" color="#080">
           <Primeiro />
@@ -77,6 +77,10 @@ export default function App() {
 
         <Card title="Aprendendo React na Cod3r: Contador" color="#055">
           <Contador numeroInicial={10} passoInicial={2} />
+        </Card>
+
+        <Card title="Aprendendo React na Cod3r: MegaSena" color="#055">
+          <Megasena quantidade={6} />
         </Card>
 
       </div>
