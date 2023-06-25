@@ -1,0 +1,11 @@
+.Contador {
+  font-size: 1.4rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.Contador h1 {
+  margin: 0;
+}
