@@ -21,12 +21,8 @@ export default function App() {
 
   return (
     <div className='App'>
-      {/* <BrowserRouter> */}
       <Menu />
-
       <RouterProvider router={router} />
-      {/* <Content />
-      </BrowserRouter> */}
     </div>
   );
 }
