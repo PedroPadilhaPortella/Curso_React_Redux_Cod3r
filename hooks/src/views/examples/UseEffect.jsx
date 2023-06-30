@@ -7,7 +7,6 @@ const UseEffect = (props) => {
   const [numero, setNumero] = useState(1)
   const [fatorial, setFatorial] = useState(1)
   const [status, setStatus] = useState("Impar")
-
   function calcularFatorial(numero) {
     if (numero < 0) return 'Não existe';
     if (numero === 0) return 1;
