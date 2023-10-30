@@ -6,6 +6,7 @@ import LabelAndInput from '../common/form/LabelAndInput';
 import { init } from './BillingCycleActions';
 import ItemList from './ItemList';
 import Summary from './Summary'
+import If from '../common/operator/If';
 
 class BillingCycleForm extends Component {
 
@@ -37,9 +38,11 @@ class BillingCycleForm extends Component {
             field='debts' legend='Débitos' showStatus={true} />
         </div>
         <div className="box-footer">
+          <If test={ this.props.handleSubmit && this.props.submitLabel }>
           <button type="submit" className={`btn btn-${this.props.submitClass}`}>
             {this.props.submitLabel}
           </button>
+          </If>
           <button type="button" className="btn btn-default" onClick={this.props.init}>Cancel</button>
         </div>
       </form>

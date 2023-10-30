@@ -4,7 +4,7 @@ import { bindActionCreators } from 'redux'
 import { Field, arrayInsert, arrayRemove } from 'redux-form'
 import Grid from '../common/layout/Grid'
 import Input from '../common/form/input'
-import If from '../common/operator/if'
+import If from '../common/operator/If'
 
 class ItemList extends Component {
 
@@ -32,20 +32,22 @@ class ItemList extends Component {
           <td><Field name={`${this.props.field}[${index}].status`} component={Input}
             placeholder='Informe o status' readOnly={this.props.readOnly} /></td>
         </If>
-        <td>
-          <button type='button' className='btn btn-success'
-            onClick={() => this.add(index + 1)}>
-            <i className="fa fa-plus"></i>
-          </button>
-          <button type='button' className='btn btn-warning'
-            onClick={() => this.add(index + 1, item)}>
-            <i className="fa fa-clone"></i>
-          </button>
-          <button type='button' className='btn btn-danger'
-            onClick={() => this.remove(index)}>
-            <i className="fa fa-trash-o"></i>
-          </button>
-        </td>
+        <If readOnly={this.props.readOnly}>
+          <td>
+            <button type='button' className='btn btn-success'
+              onClick={() => this.add(index + 1)}>
+              <i className="fa fa-plus"></i>
+            </button>
+            <button type='button' className='btn btn-warning'
+              onClick={() => this.add(index + 1, item)}>
+              <i className="fa fa-clone"></i>
+            </button>
+            <button type='button' className='btn btn-danger'
+              onClick={() => this.remove(index)}>
+              <i className="fa fa-trash-o"></i>
+            </button>
+          </td>
+        </If>
       </tr>
     ))
   }
@@ -63,7 +65,9 @@ class ItemList extends Component {
                 <If test={this.props.showStatus}>
                   <th>Status</th>
                 </If>
-                <th className='table-actions'>Ações</th>
+                <If readOnly={this.props.readOnly}>
+                  <th className='table-actions'>Ações</th>
+                </If>
               </tr>
             </thead>
             <tbody>

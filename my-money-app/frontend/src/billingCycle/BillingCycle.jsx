@@ -29,6 +29,7 @@ class BillingCycle extends Component {
               <TabHeader label='Incluir' icon='plus' target='tabCreate' />
               <TabHeader label='Alterar' icon='pencil' target='tabUpdate' />
               <TabHeader label='Excluir' icon='trash' target='tabDelete' />
+              <TabHeader label='Gerenciar' icon='eye' target='tabManage' />
             </TabsHeader>
             <TabsContent>
               <TabContent id='tabList'>
@@ -48,6 +49,9 @@ class BillingCycle extends Component {
                 <BillingCycleForm onSubmit={this.props.remove} 
                   readOnly={true} submitLabel='Excluir' submitClass='danger' 
                 />
+              </TabContent>
+              <TabContent id='tabManage'>
+                <BillingCycleForm readOnly={true} />
               </TabContent>
             </TabsContent>
           </Tabs>

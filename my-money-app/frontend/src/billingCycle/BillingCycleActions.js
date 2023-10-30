@@ -56,6 +56,14 @@ export function showDelete(billingCycle) {
   ]
 }
 
+export function showManage(billingCycle) {
+  return [
+    showTabs('tabManage'),
+    selectTab('tabManage'),
+    initialize('billingCycleForm', billingCycle)
+  ]
+}
+
 export function init() {
   return [
     showTabs('tabList', 'tabCreate'),
